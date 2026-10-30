@@ -1,84 +1,322 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff6f8">
-  <meta name="description" content="A little corner made with love, just for you.">
-  <title>Skylar's Little Corner 💗</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6dde5">
+<title>A Little Piece of Me ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #f6dde5;
+  --card: rgba(255,255,255,.72);
+  --ink: #713d55;
+  --accent: #bd7895;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  transition: background .5s, color .5s;
+}
+
+body[data-mood="stress"] {
+  --bg: #f6dde5; --ink: #713d55; --accent: #bd7895;
+}
+body[data-mood="anxious"] {
+  --bg: #dce8fa; --ink: #345477; --accent: #7198c7;
+}
+body[data-mood="miss"] {
+  --bg: #f8e8c9; --ink: #79572b; --accent: #c79b55;
+}
+body[data-mood="cheer"] {
+  --bg: #ddf0df; --ink: #3b6547; --accent: #75a980;
+}
+body[data-mood="flirty"] {
+  --bg: #e8ddf8; --ink: #64477f; --accent: #a187c7;
+}
+
+main {
+  width: min(100% - 32px, 520px);
+  margin: auto;
+  padding: 35px 0 55px;
+}
+
+header { text-align: center; margin-bottom: 28px; }
+
+.heart { font-size: 35px; }
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  margin: 8px 0;
+}
+
+h2 { font-family: Georgia, serif; font-size: 28px; }
+
+p { line-height: 1.65; }
+
+.small { font-size: 13px; opacity: .75; }
+
+.card {
+  background: var(--card);
+  padding: 23px;
+  border-radius: 24px;
+  margin: 15px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,.045);
+}
+
+.mood {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+  padding: 18px;
+  margin: 11px 0;
+  border: 0;
+  border-radius: 18px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mood span:first-child { font-size: 27px; }
+.mood strong { display: block; margin-bottom: 4px; }
+.mood small { opacity: .7; }
+
+button { font-family: inherit; }
+
+audio { width: 100%; margin-top: 12px; }
+
+.player-title { font-weight: 650; }
+
+.back {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid currentColor;
+  padding: 11px 17px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+
+.message {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.hidden { display: none !important; }
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  opacity: .65;
+  padding-top: 20px;
+}
+
+.breath {
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: 20px auto;
+  display: grid;
+  place-items: center;
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,100% { transform: scale(.8); }
+  50% { transform: scale(1.15); }
+}
+</style>
 </head>
-<body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
 
-  <main class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="#" id="homeBrand" aria-label="Go home">
-        <span class="brand-heart">♥</span>
-        <span>your little corner</span>
-      </a>
-      <span class="made-with">made with love</span>
-    </header>
+<body data-mood="stress">
+<main>
 
-    <section id="homeScreen" class="screen home-screen">
-      <div class="hero">
-        <div class="eyebrow"><span class="sparkle">✦</span> a little something for you</div>
-        <h1>Hey, baby<span class="pink">.</span></h1>
-        <p class="intro">I made you a little place to come whenever you need a reminder that you're loved — especially when I can't be right there beside you.</p>
-        <div class="tiny-note">Take what you need. I've got you. <span>♡</span></div>
-      </div>
+<section id="home">
+  <header>
+    <div class="heart">♡</div>
+    <h1>A Little Piece of Me</h1>
+    <p>A little place for you, whenever you need me.</p>
+  </header>
 
-      <div class="prompt-row">
-        <div>
-          <p class="section-kicker">CHECK IN WITH YOURSELF</p>
-          <h2>What do you need right now?</h2>
-        </div>
-        <span class="sun-icon">☼</span>
-      </div>
+  <div class="card">
+    <h2>Hey beautiful ❤️</h2>
+    <p>
+      I made this little corner just for you.
+      Whatever kind of day you're having, there's
+      always a little reminder here that you're loved,
+      appreciated and never alone.
+    </p>
+    <div class="player-title">A little message from me</div>
+    <p class="small">Listen whenever you want to hear my voice.</p>
+    <audio controls preload="none" src="audio/introduction.m4a"></audio>
+  </div>
 
-      <div class="mood-grid">
-        <button class="mood-card stress" data-mood="stress">
-          <span class="mood-emoji">🫂</span><span class="mood-title">I'm stressed</span><span class="mood-sub">Let's slow things down</span><span class="card-arrow">↗</span>
-        </button>
-        <button class="mood-card anxious" data-mood="anxious">
-          <span class="mood-emoji">🌷</span><span class="mood-title">I'm feeling anxious</span><span class="mood-sub">A little grounding</span><span class="card-arrow">↗</span>
-        </button>
-        <button class="mood-card miss" data-mood="miss">
-          <span class="mood-emoji">💌</span><span class="mood-title">I miss you</span><span class="mood-sub">A piece of me, close by</span><span class="card-arrow">↗</span>
-        </button>
-        <button class="mood-card cheer" data-mood="cheer">
-          <span class="mood-emoji">✨</span><span class="mood-title">Before cheer</span><span class="mood-sub">Go do your thing, gorgeous</span><span class="card-arrow">↗</span>
-        </button>
-        <button class="mood-card flirty" data-mood="flirty">
-          <span class="mood-emoji">😏</span><span class="mood-title">I'm in the mood</span><span class="mood-sub">A little flirt never hurt</span><span class="card-arrow">↗</span>
-        </button>
-      </div>
+  <h2>What are we feeling today?</h2>
+  <p class="small">Choose whichever feels most like you right now.</p>
 
-      <footer class="home-footer">
-        <span>one tap away from a little love</span>
-        <span>♡</span>
-      </footer>
-    </section>
+  <button class="mood" onclick="openMood('stress')">
+    <span>🌷</span><span><strong>I'm stressed</strong><small>Take a little break. You deserve it.</small></span>
+  </button>
 
-    <section id="detailScreen" class="screen detail-screen hidden" aria-live="polite">
-      <button class="back-button" id="backButton">← <span>All moods</span></button>
-      <div class="detail-card">
-        <div class="detail-emoji" id="detailEmoji">🫂</div>
-        <p class="section-kicker" id="detailKicker">A LITTLE NOTE FOR YOU</p>
-        <h1 id="detailTitle">Take a breath, baby.</h1>
-        <p class="detail-intro" id="detailIntro"></p>
-        <div class="message-box">
-          <p id="mainMessage"></p>
-          <p class="signature">All my love, always. <span>♡</span></p>
-        </div>
-        <div id="extraContent" class="extra-content"></div>
-        <button class="another-button" id="anotherButton">Give me another reminder <span>↻</span></button>
-        <p class="bottom-love">You never have to earn my love. You already have it. ♡</p>
-      </div>
-    </section>
-  </main>
+  <button class="mood" onclick="openMood('anxious')">
+    <span>☁️</span><span><strong>I'm feeling anxious</strong><small>Let's slow everything down.</small></span>
+  </button>
 
-  <script src="script.js"></script>
+  <button class="mood" onclick="openMood('miss')">
+    <span>💌</span><span><strong>I miss you</strong><small>A little reminder that I'm with you.</small></span>
+  </button>
+
+  <button class="mood" onclick="openMood('cheer')">
+    <span>✨</span><span><strong>Before cheer</strong><small>Go out there and be amazing.</small></span>
+  </button>
+
+  <button class="mood" onclick="openMood('flirty')">
+    <span>💜</span><span><strong>I'm feeling flirty</strong><small>Well, hello gorgeous...</small></span>
+  </button>
+
+  <footer>Made with all my love, just for you. ♡</footer>
+</section>
+
+<section id="detail" class="hidden">
+  <button class="back" onclick="goHome()">← Back home</button>
+  <header>
+    <div class="heart" id="emoji">🌷</div>
+    <h1 id="heading">A little moment</h1>
+    <p id="subheading"></p>
+  </header>
+
+  <div class="card">
+    <div class="player-title">Listen to me ❤️</div>
+    <p class="small">I wanted you to have my voice here, too.</p>
+    <audio id="moodAudio" controls preload="none"></audio>
+  </div>
+
+  <div class="card">
+    <p class="message" id="message"></p>
+  </div>
+
+  <div id="breathing" class="card hidden">
+    <h2>Let's breathe together</h2>
+    <p>Follow the circle. Breathe in as it grows, and out as it shrinks.</p>
+    <div class="breath">Breathe</div>
+    <p class="small">There's no rush. Take your time.</p>
+  </div>
+
+  <div class="card">
+    <p id="extra"></p>
+  </div>
+
+  <button class="primary" onclick="goHome()">Back to my moods ♡</button>
+  <footer>You're my favourite person. Always. ❤️</footer>
+</section>
+
+</main>
+
+<script>
+const moods = {
+  stress: {
+    emoji: "🌷",
+    title: "When life feels heavy",
+    subtitle: "You don't have to do everything at once.",
+    audio: "audio/stress.m4a",
+    message: "Baby, take a second. I know sometimes everything can feel like it's happening at once, and I wish I could take some of that weight off your shoulders. You don't have to be strong every second. You deserve rest, patience and love, too.",
+    extra: "One thing at a time, my love. I'm proud of you, even on the days when you don't feel proud of yourself."
+  },
+  anxious: {
+    emoji: "☁️",
+    title: "Let's slow down",
+    subtitle: "You're safe to take a moment for yourself.",
+    audio: "audio/anxious.m4a",
+    message: "Hey sweetheart. Come back to this moment with me. You don't need to figure everything out right now. Take a breath. Unclench your shoulders. Give yourself permission to pause. I'm right here, and you don't have to face every thought all at once.",
+    extra: "You are loved. You are important. And one difficult moment doesn't define your whole day."
+  },
+  miss: {
+    emoji: "💌",
+    title: "Missing me?",
+    subtitle: "Consider this a little hug from me.",
+    audio: "audio/miss-you.m4a",
+    message: "I wish I could be next to you right now, holding you close and reminding you how much I love you. Until I can, I hope this reminds you that distance doesn't change how I feel. You're always on my mind, beautiful.",
+    extra: "Imagine me giving you the biggest hug and refusing to let go. I love you, baby."
+  },
+  cheer: {
+    emoji: "✨",
+    title: "Go be amazing",
+    subtitle: "Your little cheerleading section is right here.",
+    audio: "audio/cheer.m4a",
+    message: "BABYYYY! You've got this. I hope you walk in there knowing how amazing you are. Be confident, enjoy yourself and give it everything you've got. Don't forget how much work you've put in to get here.",
+    extra: "I'm already proud of you. Now go show them what you've got. I'll be cheering for you from here."
+  },
+  flirty: {
+    emoji: "💜",
+    title: "Well, hello gorgeous...",
+    subtitle: "Someone's feeling a little playful.",
+    audio: "audio/flirty.m4a",
+    message: "Oh, so this is the mood we're in? I hope you know how ridiculously attractive you are. Honestly, you make it very difficult for me to behave. If I were there right now, you'd be getting all my attention.",
+    extra: "Just a reminder: you're my favourite distraction, my favourite person and my favourite girl. ❤️"
+  }
+};
+
+function openMood(key) {
+  const mood = moods[key];
+  document.body.dataset.mood = key;
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("detail").classList.remove("hidden");
+
+  document.getElementById("emoji").textContent = mood.emoji;
+  document.getElementById("heading").textContent = mood.title;
+  document.getElementById("subheading").textContent = mood.subtitle;
+  document.getElementById("message").textContent = mood.message;
+  document.getElementById("extra").textContent = mood.extra;
+
+  const audio = document.getElementById("moodAudio");
+  audio.pause();
+  audio.src = mood.audio;
+  audio.load();
+
+  document.getElementById("breathing")
+    .classList.toggle("hidden", key !== "anxious");
+
+  history.pushState({ mood: key }, "", "#" + key);
+}
+
+function goHome() {
+  document.getElementById("moodAudio").pause();
+  document.getElementById("detail").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+  document.body.dataset.mood = "stress";
+  history.pushState({}, "", location.pathname);
+}
+
+window.addEventListener("popstate", () => {
+  if (location.hash && moods[location.hash.slice(1)]) {
+    openMood(location.hash.slice(1));
+  } else {
+    document.getElementById("detail").classList.add("hidden");
+    document.getElementById("home").classList.remove("hidden");
+    document.body.dataset.mood = "stress";
+  }
+});
+</script>
 </body>
 </html>
