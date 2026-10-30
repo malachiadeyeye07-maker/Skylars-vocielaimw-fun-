@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff6f8">
+  <meta name="description" content="A little corner made with love, just for you.">
+  <title>Skylar's Little Corner 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" id="homeBrand" aria-label="Go home">
+        <span class="brand-heart">♥</span>
+        <span>your little corner</span>
+      </a>
+      <span class="made-with">made with love</span>
+    </header>
+
+    <section id="homeScreen" class="screen home-screen">
+      <div class="hero">
+        <div class="eyebrow"><span class="sparkle">✦</span> a little something for you</div>
+        <h1>Hey, baby<span class="pink">.</span></h1>
+        <p class="intro">I made you a little place to come whenever you need a reminder that you're loved — especially when I can't be right there beside you.</p>
+        <div class="tiny-note">Take what you need. I've got you. <span>♡</span></div>
+      </div>
+
+      <div class="prompt-row">
+        <div>
+          <p class="section-kicker">CHECK IN WITH YOURSELF</p>
+          <h2>What do you need right now?</h2>
+        </div>
+        <span class="sun-icon">☼</span>
+      </div>
+
+      <div class="mood-grid">
+        <button class="mood-card stress" data-mood="stress">
+          <span class="mood-emoji">🫂</span><span class="mood-title">I'm stressed</span><span class="mood-sub">Let's slow things down</span><span class="card-arrow">↗</span>
+        </button>
+        <button class="mood-card anxious" data-mood="anxious">
+          <span class="mood-emoji">🌷</span><span class="mood-title">I'm feeling anxious</span><span class="mood-sub">A little grounding</span><span class="card-arrow">↗</span>
+        </button>
+        <button class="mood-card miss" data-mood="miss">
+          <span class="mood-emoji">💌</span><span class="mood-title">I miss you</span><span class="mood-sub">A piece of me, close by</span><span class="card-arrow">↗</span>
+        </button>
+        <button class="mood-card cheer" data-mood="cheer">
+          <span class="mood-emoji">✨</span><span class="mood-title">Before cheer</span><span class="mood-sub">Go do your thing, gorgeous</span><span class="card-arrow">↗</span>
+        </button>
+        <button class="mood-card flirty" data-mood="flirty">
+          <span class="mood-emoji">😏</span><span class="mood-title">I'm in the mood</span><span class="mood-sub">A little flirt never hurt</span><span class="card-arrow">↗</span>
+        </button>
+      </div>
+
+      <footer class="home-footer">
+        <span>one tap away from a little love</span>
+        <span>♡</span>
+      </footer>
+    </section>
+
+    <section id="detailScreen" class="screen detail-screen hidden" aria-live="polite">
+      <button class="back-button" id="backButton">← <span>All moods</span></button>
+      <div class="detail-card">
+        <div class="detail-emoji" id="detailEmoji">🫂</div>
+        <p class="section-kicker" id="detailKicker">A LITTLE NOTE FOR YOU</p>
+        <h1 id="detailTitle">Take a breath, baby.</h1>
+        <p class="detail-intro" id="detailIntro"></p>
+        <div class="message-box">
+          <p id="mainMessage"></p>
+          <p class="signature">All my love, always. <span>♡</span></p>
+        </div>
+        <div id="extraContent" class="extra-content"></div>
+        <button class="another-button" id="anotherButton">Give me another reminder <span>↻</span></button>
+        <p class="bottom-love">You never have to earn my love. You already have it. ♡</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
